@@ -1,0 +1,12 @@
+
+POST localhost:8181/v1/data/rules/allow
+
+
+{
+    "input":{
+        "role": "customer",
+        "user": "bob",
+        "action": "update",
+        "resource": "position"
+    }
+}

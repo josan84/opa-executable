@@ -1,0 +1,18 @@
+discovery:
+  name: discovery
+  prefix: /systems/e29bf5c5bafa49409705a042946fdd83
+  service: styra
+labels:
+  system-id: e29bf5c5bafa49409705a042946fdd83
+  system-type: custom
+services:
+- credentials:
+    bearer:
+      token: 3UHJe-rufG_UHKE-30g80FqdfCJJXXwhoDRPVKHDgnQ4c0kIfFoEoII4cdgrFMk1zm9i5R6pVgDi7x3jEImKigXqhA
+  name: styra
+  url: https://insight.svc.styra.com/v1
+- credentials:
+    bearer:
+      token: 3UHJe-rufG_UHKE-30g80FqdfCJJXXwhoDRPVKHDgnQ4c0kIfFoEoII4cdgrFMk1zm9i5R6pVgDi7x3jEImKigXqhA
+  name: styra-bundles
+  url: https://insight.svc.styra.com/v1/bundles
