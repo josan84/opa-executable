@@ -1,0 +1,16 @@
+services:
+   reverse-proxy:
+    image: stefanscherer/traefik-windows 
+    command: --docker.endpoint=npipe:////./pipe/docker_engine
+    ports:
+        - "80:80"
+        - "8082:8080"        
+    volumes:
+        - .:C:/etc/traefik
+   opa-exe:
+    image: me/opa-image
+    ports:
+        - "8181:8181"
+    labels:
+        - "traefik.frontend.entryPoints=http"
+        - "traefik.frontend.rule=opa-exe.docker.local"
