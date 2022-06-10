@@ -3,7 +3,13 @@ services:
     image: me/opa-image
     ports:
         - "8181:8181"
+    networks:
+        - opanet
    opa-api:
     image: me/api-image    
     ports:
         - "8083:80"
+    networks:
+        - opanet
+networks:
+    opanet:

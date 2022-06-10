@@ -1,0 +1,16 @@
+services:
+   opa:
+    image: me/opa-image
+    networks:
+        - opanet
+    ports:
+        - "8181:8181"
+   opa-api:
+    image: me/api-image
+    networks:
+        - opanet
+    ports:
+        - "8083:80"
+networks:
+    opanet:
+        external: true
